@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # AlphaSupps
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/alpha_supps`. To experiment with that code, run `bin/console` for an interactive prompt.
@@ -41,3 +42,7 @@ The gem is available as open source under the terms of the [MIT License](https:/
 ## Code of Conduct
 
 Everyone interacting in the AlphaSupps project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/'thomascvilesjr-129971'/alpha_supps/blob/master/CODE_OF_CONDUCT.md).
+=======
+# alpha_supps
+A CLI application for seeing information based on AlphaFitnessSupplements.net
+>>>>>>> 554536c1c1ab090a89ea97d419dd324361cdf7f3
