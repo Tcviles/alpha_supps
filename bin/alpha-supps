@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require './lib/alpha_supps'
+
+AlphaSupps::CLI.new.call

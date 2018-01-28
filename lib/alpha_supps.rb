@@ -1,5 +1,2 @@
-require "alpha_supps/version"
-
-module AlphaSupps
-  # Your code goes here...
-end
+require_relative "./alpha_supps/version"
+require_relative './alpha_supps/cli'
