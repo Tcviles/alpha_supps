@@ -1,3 +1,5 @@
+require'pry'
+
 class AlphaSupps::CLI
 
   def call
@@ -18,13 +20,17 @@ class AlphaSupps::CLI
     input = gets.strip
     case input
     when "1"
-      puts "BEAST MODE"
+      AlphaScraper.create_list("Pre-workout")
+      menu
     when "2"
-      puts "GET SWOLE!"
+      AlphaScraper.create_list("Protein")
+      menu
     when "3"
-      puts "GUMMY BEARS!"
+      AlphaScraper.create_list("Aminos")
+      menu
     when "4"
-      puts "YOURE A FATTY!"
+      AlphaScraper.create_list("Fat Burner")
+      menu
     when "exit"
       goodbye
     when "menu"
