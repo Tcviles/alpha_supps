@@ -5,30 +5,31 @@ require'nokogiri'
 class AlphaSupps::CLI
 
   def call
+    AlphaScraper.scrape_sites
     supplement_types
     menu
   end
 
   def supplement_types
     puts "Welcome to Alpha Supplements!"
-    puts "Here are the categories of products that we offer!"
-    puts "1. Pre-workout"
-    puts "2. Protein"
-    puts "3. Aminos"
-    puts "4. Fat Burner"
-    puts "5. Other"
-    AlphaScraper.scrape_sites
+    puts "Here are the categories of products that we offer!", ""
+    puts "1. Pre-workouts"
+    puts "2. Protein Powders"
+    puts "3. Amino Acids"
+    puts "4. Fat Burners"
+    puts "5. Other", ""
   end
 
   def menu
     puts "Select the number of the category to see our products!!"
     puts "Or type 'phone', 'address', 'menu', or 'exit'"
     input = gets.strip
+    puts
     case input
     when "1"
       list = AlphaScraper.list_by_type("Pre-Workout")
       list.each.with_index(1) {|item, i| puts "#{i}. #{item.name} - #{item.type} - #{item.price}"}
-      puts""
+      puts
       menu
     when "2"
       list = AlphaScraper.list_by_type("Protein")
@@ -59,7 +60,7 @@ class AlphaSupps::CLI
       puts "Indianapolis, IN 46227"
       puts ""
       menu
-    when "exit"
+    when /exit(!)?/
       goodbye
     when "menu"
       call
