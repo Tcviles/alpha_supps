@@ -1,4 +1,6 @@
-require_relative "./alpha_supps/version"
+require_relative './alpha_supps/version'
 require_relative './alpha_supps/cli'
-require_relative './alpha_supps/alpha_scraper'
-require "nokogiri"
+require_relative './alpha_supps/alpha_product'
+require 'open-uri'
+require 'nokogiri'
+require 'launchy'
